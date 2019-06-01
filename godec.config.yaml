@@ -1,0 +1,13 @@
+command:
+  build: "GOOS=linux GOARCH=amd64 packr build"
+  start: "go run main.go"
+ignore: 
+  - "./decbuilder"
+  - "./decorators"
+  - "./tmp"
+  - "./tools"
+  - "./.git"
+  - "./README.md"
+  - "./godec.config.yaml"
+vendor:
+  decorators.GenMarshJSON: "github.com/darkfoxs96/godec/decorators"
